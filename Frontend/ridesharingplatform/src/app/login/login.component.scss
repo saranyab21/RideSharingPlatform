@@ -1,0 +1,49 @@
+.background-image {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/005/073/071/non_2x/user-not-found-account-not-register-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg');
+  background-size: 600px 450px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 96vh;
+}
+
+
+
+form {
+    min-width:300px;
+    max-width:400px;
+    padding:20px;
+    margin:0 auto;
+    background: #b8e9f2;
+  //background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  
+  //background: linear-gradient(to right, #ffd194, #70e1f5);
+  background: -webkit-linear-gradient(to right, #70e1f5, #e3f0f3);  
+  background: linear-gradient(to right, #70e1f5, #e3e5e6);
+    -webkit-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    -moz-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+  }
+  
+  form input {
+    border:1px solid #eee;
+    border-radius:0 !important;
+    padding:5px 8px;
+    color:#444;
+  }
+  
+  form button {
+    margin-top:20px;
+  }
+  
+  
+  
+  .pull-right {
+    float:right;
+  }
+  .cont{
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    
+  }

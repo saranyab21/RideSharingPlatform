@@ -1,0 +1,56 @@
+
+    // .page-background {
+    //   background-image: url('https://www.propergroove.org/wp-content/uploads/iStock-494347092.jpg');
+    //   background-size: cover;
+    //   background-position: center;
+    //   /* Additional background properties can be added as needed */
+    // }
+    
+    //https://www.propergroove.org/wp-content/uploads/iStock-494347092.jpg
+
+    .page-background {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/005/163/930/original/incomplete-data-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg'), url("https://static.vecteezy.com/system/resources/previews/007/104/562/non_2x/incomplete-personal-data-information-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg");
+      background-size: 500px 400px, 500px 400px ;
+      background-position: right bottom, top left;
+      background-repeat: no-repeat,  no-repeat;
+      height: 96vh;
+    }
+    
+    form {
+    min-width:350px;
+    max-width:400px;
+    padding:20px;
+    margin:0 auto;
+    background: #70e1f5;
+  background: -webkit-linear-gradient(to right, #d9f1f5, #dae4ee);  
+  background: linear-gradient(to right, #70e1f5, #e3e5e6);
+    -webkit-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    -moz-box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+    box-shadow: 3px 3px 23px -9px rgba(0,0,0,0.86);
+  }
+  
+  form input {
+    border:1px solid #eee;
+    border-radius:0 !important;
+    padding:5px 8px;
+    color:#444;
+  }
+  
+  form button {
+    margin-top:20px;
+  }
+  
+  
+  
+  .pull-right {
+    float:right;
+  }
+  .cont{
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    
+  }
+    

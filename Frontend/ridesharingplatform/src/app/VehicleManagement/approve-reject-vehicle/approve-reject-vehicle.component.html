@@ -1,0 +1,69 @@
+<div *ngIf="vehicles.length==0">
+  <h2 class="text-center mb-3">No Pending Vehicle Approval</h2>
+</div>
+<div class="container" *ngIf="updated">
+  <h2 class="text-center mb-3">Vehicle Status Updated Successfully</h2>
+  <button class="btn btn-primary" (click)="updated=false;" routerLink="">Back</button>
+</div>
+<div *ngIf="isLoading">
+  <app-loading></app-loading>
+</div>
+<div *ngIf="!isLoading">
+
+  <div *ngIf="!updated">
+    <div *ngIf="vehicle" class="container mt-4" style="max-width: 362px;">
+      <h2 class="text-center mb-3">Vehicle Details</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">Vehicle Registration No: {{ vehicle.registrationNo }}</p>
+          <p class="card-text">Vehicle Type: {{ vehicle.vehicleTypeDto.type }}</p>
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vehicleDetailsModal">
+            Show Devicle Details
+          </button>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary mr-2" (click)="navigatePrevious()"
+            [disabled]="isFirstVehicle()">Previous</button>
+          <button class="btn btn-primary" (click)="navigateNext()" [disabled]="isLastVehicle()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap modal for vehicle details -->
+    <div class="modal fade" id="vehicleDetailsModal" tabindex="-1" role="dialog"
+      aria-labelledby="vehicleDetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="vehicleDetailsModalLabel">Vehicle Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Registration No : {{vehicle.registrationNo}}</p>
+            <p>Registration Date : {{vehicle.vehicleDetailDto.registrationDate}}</p>
+            <p>Registration Expires On : {{vehicle.vehicleDetailDto.registrationExpiresOn}}</p>
+            <p>VehicleType : {{vehicle.vehicleTypeDto.type}}</p>
+            <p>Max Passange allowed in Vehicle : {{vehicle.vehicleTypeDto.maxPassengersAllowed}}</p>
+            <p>RTO Name : {{vehicle.vehicleDetailDto.rtoName}}</p>
+            <p>Insurance Company Name : {{vehicle.vehicleDetailDto.insuranceCompanyName}}</p>
+            <p>Insurance No. : {{vehicle.vehicleDetailDto.insuranceNo}}</p>
+            <p>Insuranced On : {{vehicle.vehicleDetailDto.insurancedOn}}</p>
+            <p>Insurance Expires On : {{vehicle.vehicleDetailDto.insuranceExpiresOn}}</p>
+            <p>PUC Certificate No : {{vehicle.vehicleDetailDto.pucCertificateNo}}</p>
+            <p>PUC Issued On : {{vehicle.vehicleDetailDto.pucIssuedOn}}</p>
+            <p>PUC Expires On : {{vehicle.vehicleDetailDto.pucValidUntil}}</p>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="closemodal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" (click)="approveVehicle()">Approve</button>
+            <button type="button" class="btn btn-danger" (click)="rejectVehicle()">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

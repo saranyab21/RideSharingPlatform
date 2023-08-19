@@ -1,0 +1,27 @@
+.page-background {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/008/326/232/non_2x/add-fill-information-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg'); // url("https://static.vecteezy.com/system/resources/previews/007/104/562/non_2x/incomplete-personal-data-information-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg");
+    background-size: 350px 300px, 400px 350px ;
+    background-position: right bottom, top left;
+    background-repeat: no-repeat,  no-repeat;
+    height: 96vh;
+  }
+
+/* Style for the status label */
+.status-label {
+  margin-top: 10px;
+}
+
+/* Adjust the position of the update button */
+.update-status + .update-button {
+  margin-top: 20px;
+}
+
+  /* Style for the update button */
+#status {
+  margin-bottom: 25px;
+}
+
+/* Adjust the margin between the options and the update button */
+#status + .btn-primary {
+  margin-top: 25px;
+}
